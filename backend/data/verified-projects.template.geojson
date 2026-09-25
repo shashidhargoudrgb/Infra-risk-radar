@@ -1,0 +1,29 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [78.4867, 17.385]
+      },
+      "properties": {
+        "id": "GIS-001",
+        "name": "Example Verified Project",
+        "ministry": "Example Department",
+        "sector": "Transport",
+        "state": "Telangana",
+        "status": "Ongoing",
+        "progress": 42,
+        "originalCost": 150,
+        "cost": 175,
+        "expenditure": 60,
+        "risk": "Medium",
+        "sourceType": "Official departmental GIS",
+        "sourceUrl": "https://example.gov.in",
+        "sourceVerified": true,
+        "locationPrecision": "point"
+      }
+    }
+  ]
+}
