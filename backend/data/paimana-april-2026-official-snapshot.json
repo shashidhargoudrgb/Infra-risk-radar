@@ -1,0 +1,21 @@
+{
+  "source": "Ministry of Statistics and Programme Implementation (MoSPI), PIB Flash Report",
+  "sourceUrl": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2264967&lang=2&reg=48",
+  "reportMonth": "April 2026",
+  "published": "25 May 2026",
+  "ongoingProjects": 1981,
+  "ministriesDepartments": 17,
+  "revisedCostLakhCr": 42.78,
+  "cumulativeExpenditureLakhCr": 20.36,
+  "originalCostLakhCr": 37.13,
+  "megaProjects": 814,
+  "majorProjects": 1167,
+  "projectsCommissionedInApril": 9,
+  "newProjectsAddedToMonitoringInApril": 55,
+  "topSector": {
+    "name": "Transport & Logistics",
+    "projects": 1459,
+    "revisedCostLakhCr": 23.34
+  },
+  "note": "The application registry now contains the 1,981 project records parsed from the April 2026 All Ongoing Projects table. Precise map geometry is retained only where independently verified; the PDF itself does not provide GPS coordinates for every project."
+}
