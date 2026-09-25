@@ -1,0 +1,69 @@
+{
+  "version": 1,
+  "purpose": "Route-corridor infrastructure evidence adapters for SIH 26103",
+  "matchingPolicy": {
+    "officialGeometryKm": 2,
+    "supplementaryOsmKm": 5,
+    "routeSamplingKm": 2,
+    "statusRule": "Only an explicit source status such as ongoing, under construction, or construction started can be classified as verified ongoing."
+  },
+  "adapters": [
+    {
+      "id": "telangana-rnb-gis",
+      "priority": 2,
+      "scope": "Telangana R&B road GIS",
+      "kind": "official-gis",
+      "statusAuthority": true,
+      "geometryAuthority": true,
+      "enabled": true
+    },
+    {
+      "id": "verified-government-gis-registry",
+      "priority": 1,
+      "scope": "Imported authoritative government GIS from any Indian state/UT/department",
+      "kind": "official-gis",
+      "statusAuthority": true,
+      "geometryAuthority": true,
+      "enabled": true
+    },
+    {
+      "id": "government-work-registry",
+      "priority": 3,
+      "scope": "Bundled/imported government work records with usable geometry",
+      "kind": "government-record",
+      "statusAuthority": true,
+      "geometryAuthority": true,
+      "enabled": true
+    },
+    {
+      "id": "paimana",
+      "priority": 4,
+      "scope": "MoSPI/IPMD PAIMANA monitoring metadata",
+      "kind": "portfolio-metadata",
+      "statusAuthority": true,
+      "geometryAuthority": false,
+      "enabled": true,
+      "rule": "A PAIMANA record is exact only when authoritative project geometry is supplied. Name/locality matching is a verification candidate only."
+    },
+    {
+      "id": "openstreetmap-construction",
+      "priority": 5,
+      "scope": "Mapped construction features from OpenStreetMap/Overpass",
+      "kind": "supplementary-map",
+      "statusAuthority": false,
+      "geometryAuthority": true,
+      "enabled": true,
+      "rule": "Never label an OSM object as an official government project or verified ongoing project."
+    },
+    {
+      "id": "future-central-state-adapters",
+      "priority": 6,
+      "scope": "NHAI, Railways, Jal Shakti, state R&B and other authoritative GIS/API feeds",
+      "kind": "extension-point",
+      "statusAuthority": true,
+      "geometryAuthority": true,
+      "enabled": false,
+      "rule": "Connect only publicly accessible, authoritative feeds and preserve provenance/source URL."
+    }
+  ]
+}
