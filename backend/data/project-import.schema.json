@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Infra Risk Radar Verified Project",
+  "type": "object",
+  "required": ["id", "name", "geometry", "sourceVerified"],
+  "properties": {
+    "id": {"type": "string"},
+    "name": {"type": "string"},
+    "sourceVerified": {"const": true},
+    "sourceType": {"type": "string"},
+    "sourceUrl": {"type": "string"},
+    "geometry": {
+      "type": "object",
+      "required": ["type", "coordinates"],
+      "properties": {
+        "type": {"enum": ["Point", "LineString", "MultiLineString"]},
+        "coordinates": {}
+      }
+    }
+  }
+}
