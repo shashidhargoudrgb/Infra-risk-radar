@@ -1,0 +1,35 @@
+[
+  {
+    "state": "Telangana",
+    "department": "Roads & Buildings Department",
+    "gis": "https://tgrac.telangana.gov.in/arcgis/rest/services/RnB_Folder/RnB_Roads/MapServer",
+    "ongoingLayer": 19,
+    "plannedLayer": 20,
+    "tenderPortal": "https://tender.telangana.gov.in/",
+    "departmentPortal": "https://roadbuild.telangana.gov.in/",
+    "routeMatching": "official geometry",
+    "statusRule": "Ongoing layer may be shown as ongoing mapped government road work; tender notices alone are not labelled under construction."
+  },
+  {
+    "scope": "India",
+    "source": "PAIMANA / MoSPI-IPMD",
+    "portal": "https://ipm.mospi.gov.in/Home/PublicDashboard",
+    "routeMatching": "approximate unless project GIS geometry is supplied",
+    "statusRule": "Portfolio status is retained as published; no physical route footprint is inferred from a project name alone."
+  },
+  {
+    "scope": "India",
+    "source": "OpenStreetMap mapped construction",
+    "portal": "https://www.openstreetmap.org/",
+    "routeMatching": "mapped geometry",
+    "statusRule": "Construction tags are shown as mapped evidence, not as official government progress."
+  },
+  {
+    "name": "MoSPI/PIB PAIMANA April 2026 Flash Report",
+    "type": "official-portfolio-report",
+    "scope": "April 2026 PAIMANA portfolio totals and ministry/sector aggregates",
+    "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2264967&lang=2&reg=48",
+    "reportMonth": "April 2026",
+    "verified": true
+  }
+]
