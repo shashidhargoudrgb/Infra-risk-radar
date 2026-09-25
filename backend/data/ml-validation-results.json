@@ -1,0 +1,6 @@
+{
+  "validated": false,
+  "baselineComparison": false,
+  "note": "Placeholder metadata only. Replace only after training/testing on a documented historical outcome-labelled dataset.",
+  "metrics": null
+}
