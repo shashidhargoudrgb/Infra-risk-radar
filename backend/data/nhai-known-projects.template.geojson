@@ -1,0 +1,37 @@
+{
+  "_readme": [
+    "There is no public live API for NHAI/Bhoomi Rashi project status + geometry (see docs/NHAI_BHOOMI_RASHI_FINDINGS.md).",
+    "This file is a manually-curated bridge between the two things that ARE public separately:",
+    "  1. A cited, official ongoing-project STATUS (PIB press release, Lok Sabha/Rajya Sabha reply, NHAI bidding-transparency data).",
+    "  2. REAL geometry for that NH ref/section, taken from the route-analysis response's `nationalHighways[].segments[].coords`",
+    "     (call /api/route-analysis for a route that follows the NH in question, then copy the relevant coordinate range).",
+    "Do NOT invent a status without a citable sourceUrl. Do NOT invent geometry from a place name.",
+    "Once a row here is genuinely sourced both ways, submit it through /api/projects/import so it becomes route-eligible."
+  ],
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [[78.4867, 17.385], [78.40, 17.60]]
+      },
+      "properties": {
+        "id": "NH-EXAMPLE-001",
+        "name": "Example: NH44 widening, <section>",
+        "nhRef": "NH44",
+        "ministry": "Ministry of Road Transport and Highways",
+        "implementingAgency": "NHAI",
+        "sector": "Transport",
+        "state": "Telangana",
+        "status": "Ongoing",
+        "statusEvidence": "REQUIRED: cite the exact official document (PIB release date + URL, or PQ number + URL) that states this section is under construction.",
+        "sourceType": "Cited official status + OpenStreetMap NH geometry",
+        "sourceUrl": "REQUIRED: link to the official status citation above",
+        "sourceVerified": true,
+        "locationPrecision": "line/geometry",
+        "geometryOrigin": "Coordinates copied from route-analysis nationalHighways[].segments for this NH ref — not geocoded from a place name."
+      }
+    }
+  ]
+}
