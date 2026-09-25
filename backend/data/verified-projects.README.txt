@@ -1,0 +1,39 @@
+VERIFIED GIS PROJECT REGISTRY
+
+Purpose
+-------
+This file is the national route-matching registry for Infra Risk Radar.
+Only projects with verified geographic geometry are allowed into route conflict results.
+
+Accepted geometry
+-----------------
+- Point: [longitude, latitude] for an exact verified project location.
+- LineString: route/corridor geometry for roads, railways, pipelines, transmission lines, etc.
+- MultiLineString: multipart linear project geometry.
+
+Required evidence fields
+------------------------
+id, name, geometry, sourceType, sourceVerified=true, sourceUrl (when available)
+
+Recommended monitoring fields
+------------------------------
+ministry, sector, state, status, progress, originalCost, cost, expenditure,
+risk, start, completion, implementingAgency, lastUpdated.
+
+Accuracy rules
+--------------
+1. Do not geocode a project name and store the result as verified geometry.
+2. Do not use a tender notice alone as proof that construction is active.
+3. Do not invent progress, cost, risk or completion dates.
+4. Linear projects should use their actual LineString/MultiLineString geometry.
+5. Route matching uses <=500 m as on/overlapping and 500 m-2 km as near route.
+6. Projects beyond 2 km are not returned.
+7. A project without verified geometry remains visible in the project register but is not route-eligible.
+
+Import
+------
+POST /api/projects/import
+Content-Type: application/json
+Body: GeoJSON FeatureCollection (or array / {projects:[...]})
+
+The web UI also provides a GIS Data & Sources page with a template download and import control.
